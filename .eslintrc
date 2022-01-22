@@ -1,0 +1,145 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true,
+    "jest/globals": true,
+    "node": true
+  },
+  "plugins": ["react", "prettier"],
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:jest/recommended",
+    "plugin:jest/style",
+    "plugin:prettier/recommended",
+    "plugin:testing-library/react"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": ["node_modules", "src/"]
+      }
+    }
+  },
+  "rules": {
+    "import/order": [
+      2,
+      {
+        "groups": [
+          "external",
+          "internal",
+          "builtin",
+          "parent",
+          "sibling",
+          "index"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "*(!config|axios|classnames|react*)",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "*(react*|@testing-library)/**/*",
+            "group": "external",
+            "position": "after"
+          },
+          { "pattern": "config", "group": "internal", "position": "before" },
+          {
+            "pattern": "assets/**/*",
+            "group": "internal",
+            "position": "before"
+          },
+          { "pattern": "i18n/*", "group": "internal", "position": "before" },
+          { "pattern": "theme/*", "group": "internal", "position": "before" },
+          {
+            "pattern": "utils/**/*",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "actions/**/*",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "components/base/**/*",
+            "group": "internal",
+            "position": "before"
+          },
+          {
+            "pattern": "components/**/*",
+            "group": "internal",
+            "position": "before"
+          }
+        ],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    "no-shadow": "off",
+    "arrow-body-style": [2, "as-needed"],
+    "camelcase": 1,
+    "class-methods-use-this": 0,
+    "default-param-last": 0,
+    "import/no-dynamic-require": 1,
+    "import/no-named-as-default": 1,
+    "import/no-webpack-loader-syntax": 1,
+    "import/prefer-default-export": 0,
+    "import/extensions": 0,
+    "import/no-unresolved": [1, { "commonjs": true, "amd": true }],
+    "import/named": 1,
+    "import/namespace": 1,
+    "import/default": 1,
+    "import/export": 1,
+    "jsx-a11y/label-has-associated-control": [2, { "controlComponents": ["Input"] }],
+    "linebreak-style": [2, "unix"],
+    "no-confusing-arrow": 1,
+    "no-underscore-dangle": ["error", { "allow": ["__importStar", "__esModule", "__importDefault"] }],
+    "no-use-before-define": "off",
+    "no-plusplus": "off",
+    "prefer-destructuring": 1,
+    "react/destructuring-assignment": 0,
+    "react/function-component-definition": [2, {
+      "namedComponents": ["function-declaration", "function-expression", "arrow-function"],
+      "unnamedComponents": ["function-expression", "arrow-function"]
+    }],
+    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".tsx"] }], // TODO .js tests should be .tsx or .jsx to avoid override this rule
+    "react/jsx-first-prop-new-line": [2, "multiline"],
+    "react/jsx-fragments": [2, "element"],
+    "react/jsx-key": [2, { "checkFragmentShorthand": true }],
+    "react/jsx-props-no-spreading": [
+      1,
+      {
+        "html": "enforce",
+        "custom": "enforce",
+        "explicitSpread": "enforce",
+        "exceptions": [
+          "input",
+          "textarea",
+          "table",
+          "tr",
+          "th",
+          "tbody",
+          "td",
+          "ReactDatepicker"
+        ]
+      }
+    ],
+    "react/no-did-update-set-state": 0,
+    "react/static-property-placement": [2, "static public field"],
+    "react-hooks/exhaustive-deps": "off"
+  }
+}
