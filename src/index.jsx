@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import App from 'App';
+import AppProvider from 'context/AppProvider';
 import reportWebVitals from 'reportWebVitals';
 import theme from 'theme';
 
@@ -11,9 +12,11 @@ import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <App />
-    </ThemeProvider>
+    <AppProvider>
+      <ThemeProvider theme={theme}>
+        <App />
+      </ThemeProvider>
+    </AppProvider>
   </React.StrictMode>,
   document.getElementById('root'),
 );

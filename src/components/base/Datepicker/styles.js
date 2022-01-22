@@ -23,6 +23,7 @@ const datepicker = (theme) => css`
 
     .react-datepicker__day--in-selecting-range,
     .react-datepicker__day--keyboard-selected,
+    .react-datepicker__day--selected,
     .react-datepicker__day--in-range {
       background-color: ${theme.colors.primaryLight};
     }
