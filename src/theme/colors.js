@@ -13,6 +13,7 @@ const colors = {
   gray500: '#7b7587',
   gray300: '#b7b3bd',
   gray100: '#e9e8eb',
+  error: '#DD3333',
 };
 
 export default colors;

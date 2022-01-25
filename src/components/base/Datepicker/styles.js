@@ -4,6 +4,7 @@ const datepicker = (theme) => css`
   .react-datepicker-wrapper {
     .react-datepicker__input-container {
       input {
+        border: 0;
         outline: none;
         height: ${theme.sizes.xl};
       }

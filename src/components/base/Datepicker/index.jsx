@@ -5,7 +5,7 @@ import ReactDatepicker from 'react-datepicker';
 
 import utils from 'utils';
 
-import styles from './styles.js';
+import styles from './styles';
 
 const Datepicker = ({
   dateFormat,

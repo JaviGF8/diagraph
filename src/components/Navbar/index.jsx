@@ -3,12 +3,12 @@ import React, { useState } from 'react';
 
 import logo from 'assets/images/logos/logo-white.png';
 
-import Datepicker from 'components/base/Datepicker/index.jsx';
+import Datepicker from 'components/base/Datepicker';
 
-import useAppContext from 'hooks/useAppContext/index.js';
+import useAppContext from 'hooks/useAppContext';
 import utils from 'utils';
 
-import styles from './styles.js';
+import styles from './styles';
 
 const Navbar = () => {
   const [maxDate, setMaxDate] = useState();

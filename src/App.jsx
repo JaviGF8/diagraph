@@ -3,6 +3,8 @@ import React from 'react';
 
 import Navbar from 'components/Navbar';
 
+import LandingPage from 'pages/Landing';
+
 const appStyle = (theme) => css`
   width: 100%;
   min-height: calc(100vh - ${theme.sizes.topbarHeight});
@@ -14,12 +16,18 @@ const appStyle = (theme) => css`
   }
 `;
 
+/**
+ * In a normal project, here we should have the router
+ */
 const App = () => {
   const theme = useTheme();
+
   return (
     <div css={appStyle(theme)}>
       <Navbar />
-      <div className="body">BODY</div>
+      <div className="body">
+        <LandingPage />
+      </div>
     </div>
   );
 };
