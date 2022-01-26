@@ -1,13 +1,12 @@
 import { css } from '@emotion/react';
 
 const datepicker = (theme) => css`
-  .react-datepicker-wrapper {
-    .react-datepicker__input-container {
-      input {
-        border: 0;
-        outline: none;
-        height: ${theme.sizes.xl};
-      }
+  .react-datepicker__input-container {
+    border: 1px solid ${theme.colors.gray300};
+    input {
+      border: 0;
+      outline: none;
+      height: ${theme.sizes.xl};
     }
   }
 

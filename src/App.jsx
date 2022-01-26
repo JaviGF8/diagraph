@@ -11,6 +11,10 @@ const appStyle = (theme) => css`
   background: ${theme.colors.gray100};
   padding-top: ${theme.sizes.topbarHeight};
 
+  @media screen and (max-width: ${theme.screen.sm}) {
+    padding-top: ${theme.sizes.topbarHeightMobile};
+  }
+
   .body {
     padding: ${theme.sizes.xl};
   }
@@ -24,10 +28,10 @@ const App = () => {
 
   return (
     <div css={appStyle(theme)}>
-      <Navbar />
       <div className="body">
         <LandingPage />
       </div>
+      <Navbar />
     </div>
   );
 };

@@ -4,7 +4,7 @@ const select = (theme) => css`
   display: flex;
   position: relative;
 
-  > .funus-input {
+  > .custom-input {
     width: 100%;
     z-index: 2;
 
@@ -69,7 +69,7 @@ const select = (theme) => css`
   }
 
   &.disabled {
-    > .funus-input {
+    > .custom-input {
       > div {
         background-color: ${theme.colors.gray300};
       }

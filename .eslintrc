@@ -116,7 +116,7 @@
       "namedComponents": ["function-declaration", "function-expression", "arrow-function"],
       "unnamedComponents": ["function-expression", "arrow-function"]
     }],
-    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".tsx"] }], // TODO .js tests should be .tsx or .jsx to avoid override this rule
+    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx"] }],
     "react/jsx-first-prop-new-line": [2, "multiline"],
     "react/jsx-fragments": [2, "element"],
     "react/jsx-key": [2, { "checkFragmentShorthand": true }],
@@ -129,6 +129,7 @@
         "exceptions": [
           "input",
           "Input",
+          "Select",
           "textarea",
           "table",
           "tr",

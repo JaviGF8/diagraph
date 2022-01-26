@@ -8,6 +8,7 @@ const sizes = {
   xl: pxToRem(32),
   xxl: pxToRem(64),
   topbarHeight: pxToRem(80),
+  topbarHeightMobile: pxToRem(120),
   pxToRem,
 };
 

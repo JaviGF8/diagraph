@@ -7,11 +7,19 @@ const landing = (theme) => css`
     ${theme.mixins.basicShadow}
   }
 
-  .tab-content {
+  .tabs-content {
     ${theme.mixins.basicShadow}
     background-color: ${theme.colors.white};
     padding: ${theme.sizes.lg};
     border-top: 0;
+
+    .tab-content {
+      display: none;
+
+      &.active {
+        display: flex;
+      }
+    }
   }
 `;
 

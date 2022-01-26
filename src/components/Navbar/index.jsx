@@ -1,7 +1,7 @@
 import { useTheme } from '@emotion/react';
 import React, { useState } from 'react';
 
-import logo from 'assets/images/logos/logo-white.png';
+import logo from 'assets/images/logos/logo-color.png';
 
 import Datepicker from 'components/base/Datepicker';
 
@@ -30,7 +30,7 @@ const Navbar = () => {
           endDate={dates?.[1]}
           maxDate={maxDate}
           onChange={onChange}
-          placeholderText="Select range"
+          placeholder="Date range"
           selected={dates?.[0]}
           selectsRange
           startDate={dates?.[0]}

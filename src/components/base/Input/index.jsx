@@ -59,6 +59,7 @@ const Input = ({
   return (
     <div
       className={classNames(
+        'custom-input',
         {
           disabled,
           error: !!error,
@@ -159,6 +160,7 @@ Input.defaultProps = {
   error: undefined,
   id: undefined,
   leftAddon: undefined,
+  name: undefined,
   onBlur: undefined,
   onChange: undefined,
   onClick: undefined,
@@ -178,7 +180,7 @@ Input.propTypes = {
   error: PropTypes.string,
   id: PropTypes.string,
   leftAddon: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   onBlur: PropTypes.func,
   onChange: PropTypes.func,
   onClick: PropTypes.func,

@@ -38,7 +38,7 @@ const input = (theme) => css`
     > div {
       ${theme.mixins.defaultTransition}
       width: 100%;
-      border: ${theme.sizes.pxToRem(1)} solid ${theme.colors.gray300};
+      border: 1px solid ${theme.colors.gray300};
       background-color: ${theme.colors.white};
       position: relative;
 

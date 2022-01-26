@@ -22,6 +22,7 @@ const Datepicker = ({
   return (
     <div css={styles.datepicker(theme)}>
       <ReactDatepicker
+        closeOnScroll
         dateFormat={dateFormat}
         endDate={endDate}
         maxDate={maxDate}
@@ -31,6 +32,7 @@ const Datepicker = ({
         selected={selected}
         selectsRange={selectsRange}
         startDate={startDate}
+        withPortal
       />
     </div>
   );
